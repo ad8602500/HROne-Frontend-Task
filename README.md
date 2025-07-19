@@ -6,7 +6,7 @@ This is a dynamic JSON Schema Builder built using **React**, **Vite**, and **Rea
 
 ## 🔗 Live Demo
 
-👉 [View Live Application](https://hrone-frontend-task.onrender.com)
+👉 [View Live Application](https://hrone.netlify.app/)
 
 ## 📌 Features
 
@@ -60,6 +60,8 @@ The JSON output reflects the structure of the created schema in this format:
     ]
   }
 ]
+
+
 🚀 Getting Started Locally
 bash
 Copy
@@ -75,14 +77,3 @@ npm install
 
 # Start development server
 npm run dev
-⚙️ Deployment
-The project is deployed on Render.com with vite.config.js configured as:
-
-js
-Copy
-Edit
-server: {
-  host: '0.0.0.0',
-  allowedHosts: ['hrone-frontend-task.onrender.com']
-}
-
