@@ -1,12 +1,88 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# JSON Schema Builder – HROne Frontend Task
 
-Currently, two official plugins are available:
+This is a dynamic JSON Schema Builder built using **React**, **Vite**, and **React Hook Form**, created as part of the HROne Frontend Intern hiring task.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Live Demo
 
-## Expanding the ESLint configuration
+👉 [View Live Application](https://hrone-frontend-task.onrender.com)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📌 Features
+
+- Add new fields dynamically with support for:
+  - `String`
+  - `Number`
+  - `Nested` (recursive)
+- Edit field names/types
+- Delete fields
+- Add nested fields under a field of type `Nested`
+- Real-time JSON preview of the schema
+
+## 🛠 Tech Stack
+
+- **ReactJS** with **Vite**
+- **React Hook Form**
+- **Ant Design**  
+- **UUID** for unique keys
+- **CSS Modules 
+
+## 🗂 Folder Structure
+
+src/
+│
+├── components/
+│ └── SchemaField.jsx # Recursive field rendering logic
+│
+├── App.jsx # Main application logic
+├── main.jsx # Entry point
+└── vite.config.js # Vite config (with allowedHosts)
+
+
+## 🧩 JSON Schema Format
+
+The JSON output reflects the structure of the created schema in this format:
+
+```json
+[
+  {
+    "key": "name",
+    "type": "String"
+  },
+  {
+    "key": "address",
+    "type": "Nested",
+    "children": [
+      {
+        "key": "city",
+        "type": "String"
+      }
+    ]
+  }
+]
+🚀 Getting Started Locally
+bash
+Copy
+Edit
+# Clone the repo
+git clone https://github.com/ad8602500/hrone-frontend-task.git
+
+# Navigate into project folder
+cd hrone-frontend-task
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+⚙️ Deployment
+The project is deployed on Render.com with vite.config.js configured as:
+
+js
+Copy
+Edit
+server: {
+  host: '0.0.0.0',
+  allowedHosts: ['hrone-frontend-task.onrender.com']
+}
+
